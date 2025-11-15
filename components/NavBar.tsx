@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {navLinks} from "@/constants";
 import Image from "next/image";
+import {NavLink} from "@/type";
 
 const NavBar = () => {
     return (
@@ -13,7 +14,7 @@ const NavBar = () => {
                 </Link>
                 <ul>
 
-                    {navLinks.map(({label, link}:{label: string, link:string}) => (
+                    {navLinks.map(({label, link}:NavLink) => (
                     <li key={label}>
                         <Link href={link} className={" hidden md:block text-sm text-primary-400 opacity-80 cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out"}>{label}</Link>
                     </li>

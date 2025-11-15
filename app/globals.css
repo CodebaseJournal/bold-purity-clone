@@ -29,12 +29,11 @@ body{
 
         nav{
             @apply container mx-auto flex-between px-5 2xl:px-0;
-            img{
 
-                button{
+            button{
                     @apply bg-transparent border-none outline-none cursor-pointer;
-                }
             }
+
 
             ul{
                 @apply flex-center gap-8 font-inter;
