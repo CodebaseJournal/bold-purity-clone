@@ -1,10 +1,18 @@
 @import "tailwindcss";
 
-@theme{
+@theme inline{
     --color-primary-100: #EAE4DC;
     --color-primary-200: #B0AAA0;
     --color-primary-300: #A59079;
     --color-primary-400: #524E48;
+
+    --font-poppins: var(--font-poppins);
+    --font-inter: var(--font-inter);
+    --font-montserrat: var(--font-montserrat);
+}
+
+body{
+    font-family: var(--font-inter);
 }
 
 @utility flex-center{
@@ -29,7 +37,7 @@
             }
 
             ul{
-                @apply flex-center gap-8;
+                @apply flex-center gap-8 font-inter;
             }
         }
     }

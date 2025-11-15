@@ -1,28 +1,28 @@
 import Link from "next/link";
+import {navLinks} from "@/constants";
+import Image from "next/image";
 
 const NavBar = () => {
     return (
         <header>
             <nav>
                 {/*The area for image like logo*/}
-                <p>Bold Purity Logo</p>
+                <Link href={'/'} className={'flex-center gap-2 text-xl'}>
+                    <p className={'font-montserrat'}>BP</p>
+                <p className={' font-montserrat'}><span className={'font-bold '}>Bold</span> Purity</p>
+                </Link>
                 <ul>
-                    {/*I'll make constants*/}
-                    <li>
-                        <Link href="/" className={"hidden md:block text-primary-400 opacity-80 text-sm cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out"}>Home</Link>
+
+                    {navLinks.map(({label, link}:{label: string, link:string}) => (
+                    <li key={label}>
+                        <Link href={link} className={" hidden md:block text-sm text-primary-400 opacity-80 cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out"}>{label}</Link>
                     </li>
-                    <li>
-                        <Link href="/" className={"hidden md:block text-primary-400 opacity-80 text-sm cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out"}>Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/" className={"hidden md:block text-primary-400 opacity-80 text-sm cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out"}>Home</Link>
-                    </li>
+                    ))}
                 </ul>
 
-                <div className={''}>
+                <div className={'flex-center gap-3'}>
                     <button>
-                    {/*Cart button*/}
-                        <p>Cart</p>
+                        <Image src={'/cart.svg'} alt={"cart icon"} width={32} height={32} />
                     </button>
                 </div>
             </nav>
