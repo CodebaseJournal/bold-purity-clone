@@ -22,46 +22,32 @@ const Hero = () => {
 
             {/* 2. TEXT CONTENT OVERLAY (Always absolute) */}
             <div className="
-                absolute z-10 w-full h-full flex flex-col
+                absolute z-10 w-full h-full flex flex-col justify-start items-center pt-24
 
-                /* --- MOBILE POSITIONING --- */
-                justify-start items-center pt-24         /* Start at top, center content, push down from Navbar */
-
-                /* --- DESKTOP POSITIONING --- */
                 md:justify-center md:items-start         /* Vertically center, left align */
                 md:pt-0 md:px-20                         /* Remove top padding, apply side padding */
             ">
 
                 {/* Text Wrapper - This is the floating box on mobile */}
-                <div className="
-                    flex flex-col gap-4 max-w-sm          /* Constrain text width */
-                    py-8 px-6                           /* Internal padding */
-
-                    /* MOBILE Floating Box Style (Replaces the solid light brown) */
-                    bg-white/80 rounded-md shadow-lg    /* Semi-transparent white box */
-                    text-center                         /* Centered text for the mobile look */
-
-                    /* DESKTOP Style */
-                    md:text-left                        /* Left-aligned text for desktop */
-                    md:bg-transparent                   /* Remove background on desktop */
-                    md:shadow-none md:rounded-none      /* Remove box styling on desktop */
-                    md:max-w-xl
-                ">
+                <div
+                    className="
+                    flex flex-col gap-4 max-w-sm py-8 px-6 text-center md:text-left md:bg-transparent md:shadow-none md:rounded-none md:max-w-xl "
+                >
 
                     {/* "Beyond the Surface" tag */}
-                    <span className="bg-white px-3 py-1 rounded-sm uppercase text-xs font-semibold self-center md:self-start">
+                    <span className="bg-white px-3 py-1 rounded-md uppercase text-xs font-semibold self-center md:self-start">
                         Beyond the Surface
                     </span>
 
                     {/* Heading text */}
-                    <div className={'hero-text'}>
+                    <div className={'hero-text text-white'}>
                         <h1 className={'uppercase font-montserrat'}>UNLOCK PURE</h1>
                         <h1 className={'uppercase font-montserrat'}>GLOW WITH</h1>
                         <h1 className={'uppercase font-montserrat'}>BOLDPURITY</h1>
                     </div>
 
                     {/* Subheading text */}
-                    <p className="md:text-xl">Let your skin feel pure love.</p>
+                    <p className="md:text-xl text-white">Let your skin feel pure love.</p>
 
                     {/* "Shop Now" button */}
                     <button className="bg-white text-primary-400 px-8 py-3 rounded-sm font-semibold uppercase text-sm mt-3 hover:bg-gray-100 transition-colors self-center md:self-start">
