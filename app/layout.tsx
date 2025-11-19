@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins,Montserrat, Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
+import {NavBar} from "@/components";
 
 const poppins = Poppins({
     weight:["400","600", "700"],
