@@ -10,11 +10,11 @@ const Hero = () => {
                 {/* Desktop Source (Loads on screens 768px and wider) */}
                 <source
                     media="(min-width: 768px)"
-                    srcSet={"/bold-purity-homepage.webp"}
+                    srcSet={"/bold-purity-homepage.png"}
                 />
                 {/* Mobile Source (Loads by default, or smaller screens) */}
                 <img
-                    src={"/bold-purity-homepage-mobile.webp"}
+                    src={"/bold-purity-homepage-mobile.png"}
                     alt={'hero'}
                     className="w-full h-full object-cover object-center md:object-right"
                 />
@@ -41,9 +41,11 @@ const Hero = () => {
 
                     {/* Heading text */}
                     <div className={'hero-text text-white'}>
-                        <h1 className={'uppercase font-montserrat'}>UNLOCK PURE</h1>
-                        <h1 className={'uppercase font-montserrat'}>GLOW WITH</h1>
-                        <h1 className={'uppercase font-montserrat'}>BOLDPURITY</h1>
+                        <h1 className={'uppercase font-montserrat'}>
+                            <span className="block">UNLOCK PURE</span>
+                            <span className="block">GLOW WITH</span>
+                            <span className="block">BOLDPURITY</span>
+                        </h1>
                     </div>
 
                     {/* Subheading text */}
